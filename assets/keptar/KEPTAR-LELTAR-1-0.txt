@@ -1,0 +1,32 @@
+MINDEARN KEPTAR 1.0 - 1.21 MUKODO ALAPHOZ
+
+Forras:
+- Kepekkel egyutt.zip
+
+Cel:
+- A MindEarn 1.21 utolso mukodo platformverzio kepanyaggal bovített, de HTML-be meg be nem illesztett kepkonyvtara.
+- A fajlnevek webbarat formara lettek rendezve: kisbetu, ekezet nelkul, szokoz nelkul.
+
+Kepek:
+- borito-sotet-preview.png - 1448x1086 - RGBA, teljesen fedett
+- borito-vilagos-preview.png - 1448x1086 - RGBA, teljesen fedett
+- hatter.png - 1024x1536 - RGB, hatterkep
+- icon-adni.png - 1254x1254 - alfa-csatornas PNG
+- icon-alkotni.png - 1254x1254 - alfa-csatornas PNG
+- icon-teremteni.png - 1254x1254 - alfa-csatornas PNG
+- mindearn-boseg-kezikonyv-sotet-transparent.png - 583x1021 - alfa-csatornas PNG
+- mindearn-boseg-kezikonyv-vilagos-transparent.png - 657x1002 - alfa-csatornas PNG
+- mindearn-dashboard-mockup-alpha.png - 1672x941 - alfa-csatornas PNG
+- mindearn-konyvek-alpha.png - 920x870 - alfa-csatornas PNG
+- mindearn-korcsoport-atlatszo-hatter.png - 1254x1254 - alfa-csatornas PNG
+- mindearn-logo-transparent-no1.png - 559x448 - alfa-csatornas PNG
+- mindearn-logo-transparent-no1-javitott-alpha.png - 559x448 - alfa-csatornas PNG
+- mindearn-munkafuzet-sotet-transparent.png - 579x1096 - alfa-csatornas PNG
+- mindearn-munkafuzet-vilagos-transparent.png - 668x1106 - alfa-csatornas PNG
+- mindearn-platform-konyvek-montazs-alpha.png - 1400x980 - alfa-csatornas PNG
+- mindearn-platform-konyvek-montazs-alpha-cropped.png - 1333x910 - alfa-csatornas PNG
+
+Fontos:
+- Ebben a verzióban HTML-be illesztes meg nem tortent.
+- A mukodo 1.21 alap funkcionalitasa igy erintetlen marad.
+- A kovetkezo lepesnel egyszerre csak egy kepet erdemes bekotni, kulon verzioszam alatt.

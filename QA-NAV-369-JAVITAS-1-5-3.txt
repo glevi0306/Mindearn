@@ -1,0 +1,23 @@
+MindEarn navigációs javítás - 1.5.3
+
+Kérés:
+- A felső navigációban a "3-6-9" ne törjön három sorba.
+- Semmi más vizuális/tartalmi blokk ne változzon.
+
+Javítás:
+- Csak az index.html felső navigációs linkjei kaptak sortörés tiltást:
+  .nav-links a { flex: 0 0 auto; white-space: nowrap; }
+- A felső navigáció linkjei közti távolság kicsit szűkebb lett, hogy a 3-6-9 egy sorban elférjen.
+
+Nem módosított területek:
+- hero szekció
+- MindEarn logó
+- jobb oldali könyv kép
+- piktogram blokk
+- visszahelyezett MindEarn képi rendszer modul
+- dashboard.html tartalmi szerkezete
+
+Ellenőrzés:
+- index.html tartalmazza a 3-6-9 sortörés elleni CSS-szabályt.
+- dashboard.html továbbra is elérhető.
+- külön index és dashboard HTML előnézet készült.

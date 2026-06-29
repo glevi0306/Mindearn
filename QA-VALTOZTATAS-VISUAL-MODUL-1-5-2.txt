@@ -1,0 +1,40 @@
+MindEarn kepi rendszer modul visszahelyezes - 1.21 visual modul 1.5.2
+
+Kiindulo alap:
+- mindearn_site_root_1_21_piktogram_1_5_1_hero_fixed_embedded
+
+Uj verzio:
+- mindearn_site_root_1_21_visual_module_1_5_2
+
+Visszahelyezett modul:
+- MindEarn kepi rendszer
+- Cim: A konyv, a platform es az elo ter egy vizualis utra kerul.
+- Helye: a Platformlogika szakasz utan, a Belepes utani elmeny szakasz elott.
+- Navigacio: bekerult a Kepek menupont, amely az index.html#kepek blokkra ugrik.
+
+Kontener igazitas:
+- A harom visual-card kartya azonos kepi zonat kapott: 300 px.
+- Emiatt a 2. es 3. kontener szovegblokkja vizszintesen egy sikba kerul az elso kontener szovegblokkjaval.
+- Nem maradt kulon magasabb elso kartya-kep, amely eltolta volna a szovegszintet.
+
+Kepek:
+- assets/visuals/book-wide-subtitle.png
+- assets/visuals/platform-laptop.png
+- assets/visuals/live-circle.png
+
+Erintetlenul hagyott reszek:
+- Hero konyves blokk: valtozatlan az 1.5.1 alaphoz kepest.
+- Logo: nem valtozott.
+- Piktogram blokk: valtozatlan az 1.5.1 alaphoz kepest.
+- Dashboard.html: nem valtozott.
+
+HTML elonezet:
+- HTML-ELO_NEZET-VISUAL-MODUL-1-5-2.html
+- Ez a tenyleges javitott index.html fajlt mutatja iframe-ben, kozvetlenul a #kepek modulra ugorva.
+
+Ellenorzes:
+- Hero szakasz osszehasonlitas az 1.5.1 alaphoz: UNCHANGED
+- Piktogram szakasz osszehasonlitas az 1.5.1 alaphoz: UNCHANGED
+- MindEarn kepi rendszer modul szama az index.html-ben: 1
+- Hianyzo hivatkozas ellenorzes: 0 hiba
+- JavaScript szintaxis ellenorzes: rendben

@@ -1,0 +1,36 @@
+MINDEARN 1.21 CONTAINER 1.3 - VALTOZTATASI JELENTES
+
+Kiindulo alap:
+- mindearn_site_root_1_21_logo_1_2_embedded
+
+Uj munkaverzio:
+- mindearn_site_root_1_21_container_1_3
+
+Valtoztatas:
+- Az index.html jobb oldali hero képi kontenere aranyosabb, magasabb es kitoltottebb lett.
+- A hero rács két oldala kozelebb kerult az 1:1 aranyhoz.
+- A jobb oldali hero kontener a bal oldali szovegblokk magassagahoz jobban igazodik.
+- Az also informacios savbol kikerult a jobb oldali zsalya jelveny: "3. het / 9".
+- Az also informacios savban csak a ket soros szoveg maradt:
+  - Sajat MindEarn utam
+  - Kurzusok, hanganyagok, gyakorlónapló, élő alkalmak
+- Az also informacios sav szovege kozepre lett rendezve.
+
+Erintett fajlok:
+- index.html
+- container-1-3.css
+
+Nem erintett:
+- dashboard.html
+- kepbeillesztesek
+- mukodesi JS logika
+
+Ellenorzes:
+- index.html hianyzo helyi hivatkozas: 0.
+- dashboard.html hianyzo helyi hivatkozas: 0.
+- mindearn-app.js szintaxis: rendben.
+- A kepi beillesztesek ebben a lepesben meg nem tortentek meg.
+
+Megjegyzes:
+- Ez a verzio elokesziti a jobb oldali hero kep beilleszteset.
+- A kovetkezo lepesben mar erre az aranyositott kontenerre erdemes bekotni a kepet.

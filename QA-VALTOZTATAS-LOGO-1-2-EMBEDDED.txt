@@ -1,0 +1,29 @@
+MINDEARN 1.21 LOGO 1.2 EMBEDDED - JAVITASI JELENTES
+
+Kiindulo problema:
+- Az index.html es dashboard.html oldalon a logo helyen torott kepikon es alt szoveg jelent meg.
+- Ennek oka valoszinuleg az volt, hogy a HTML kulon lett megnyitva, vagy az assets/keptar fajlutvonal nem volt elerheto a bongeszoben.
+
+Javitas:
+- Az index.html MindEarn logoja kozvetlenul a HTML-be lett agyazva data:image/png;base64 formaban.
+- A dashboard.html mobil felso sav logoja kozvetlenul a HTML-be lett agyazva.
+- A dashboard.html oldalsav logoja kozvetlenul a HTML-be lett agyazva.
+- A favicon hivatkozas is beagyazott PNG adatot kapott az index.html es dashboard.html fajlokban.
+- A brand-logo kepek inline meretezest is kaptak, hogy kulon CSS nelkul is lathato meretben jelenjenek meg.
+
+Erintett fajlok:
+- index.html
+- dashboard.html
+- logo-1-1.css valtozatlanul megmaradt
+- assets/keptar/mindearn-logo-transparent-no1-javitott-alpha.png megmaradt kulon fajlkent is
+
+Ellenorzes:
+- index.html beagyazott PNG logok szama: 1 logo + 1 favicon.
+- dashboard.html beagyazott PNG logok szama: 2 logo + 1 favicon.
+- index.html hianyzo helyi hivatkozas: 0.
+- dashboard.html hianyzo helyi hivatkozas: 0.
+- mindearn-app.js szintaxis: rendben.
+
+Megjegyzes:
+- Ez a verzio a logo lathatosagat fuggetleniti az assets/keptar utvonaltol.
+- A tobbi kep tovabbra is az assets mappabol toltodik, ezert a teljes oldalhoz a teljes ZIP kicsomagolasa ajanlott.

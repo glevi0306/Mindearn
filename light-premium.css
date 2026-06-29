@@ -1,0 +1,326 @@
+:root {
+  --ink: #14110d;
+  --text: #312a20;
+  --muted: #6f665a;
+  --line: #e7ddcc;
+  --line-strong: #cfc7b8;
+  --paper: #fbf8f1;
+  --paper-2: #f4edde;
+  --panel: #ffffff;
+  --gold: #167f72;
+  --gold-2: #0e5f55;
+  --jade: #167f72;
+  --jade-soft: #e7f1ee;
+  --shadow: 0 18px 42px rgba(48, 36, 18, 0.10);
+  --shadow-soft: 0 8px 22px rgba(48, 36, 18, 0.07);
+}
+
+html {
+  background: #fbf8f1;
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(251, 248, 241, 0.98) 34rem),
+    radial-gradient(circle at 12% 0%, rgba(207, 199, 184, 0.22), transparent 28rem),
+    radial-gradient(circle at 92% 6%, rgba(22, 127, 114, 0.08), transparent 24rem),
+    #fbf8f1 !important;
+  color: var(--text) !important;
+}
+
+.announcement {
+  background: #f3eee4 !important;
+  color: #312a20 !important;
+  border-bottom: 1px solid #e4dac8 !important;
+}
+
+.header,
+.mobile-bar {
+  background: rgba(251, 248, 241, 0.92) !important;
+  border-color: #eadfcb !important;
+  backdrop-filter: blur(16px);
+}
+
+.nav {
+  width: min(100%, 1480px) !important;
+  padding: 14px 24px !important;
+  gap: 14px !important;
+}
+
+.brand {
+  min-width: 170px !important;
+  gap: 10px !important;
+}
+
+.brand img {
+  width: 42px !important;
+}
+
+.nav-links {
+  flex: 1 1 auto !important;
+  justify-content: center !important;
+  gap: clamp(8px, 0.95vw, 14px) !important;
+  font-size: clamp(0.78rem, 0.82vw, 0.9rem) !important;
+  white-space: nowrap !important;
+}
+
+.nav-links a {
+  white-space: nowrap !important;
+}
+
+.nav-actions {
+  flex: 0 0 auto !important;
+  gap: 8px !important;
+}
+
+.btn,
+.ghost-btn,
+.menu-btn {
+  min-height: 38px !important;
+  padding: 8px 13px !important;
+  border-radius: 8px !important;
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.80) !important;
+  border-color: #eadfcb !important;
+}
+
+.brand b,
+h1,
+h2,
+h3,
+h4,
+.access-preview b,
+.step b,
+.stat b,
+.metric b,
+.card h3,
+.card h4,
+.lesson b,
+.row-item b,
+.download-head b,
+.logic-row b,
+.weekly-row label {
+  color: #14110d !important;
+}
+
+.brand span,
+.lead,
+.quote,
+.section-title p,
+.top p,
+.hero-panel p,
+.card p,
+.access-preview span,
+.step span,
+.stat small,
+.metric small,
+.lesson span,
+.row-item span,
+.logic-row span,
+.form-status,
+.footer,
+.footer-inner,
+.nav-label,
+.side-card p,
+.chapter-card p,
+.compass-cell span,
+.preview-main p {
+  color: var(--muted) !important;
+}
+
+.kicker {
+  color: #6f8f83 !important;
+}
+
+.nav-links,
+.nav button {
+  color: #4b4237 !important;
+}
+
+.nav-links a.active,
+.nav button.active,
+.nav button:hover,
+.status {
+  color: var(--jade) !important;
+}
+
+.btn {
+  background: linear-gradient(180deg, #9fb5a8, #6f8f83) !important;
+  color: #fbf8f1 !important;
+  box-shadow: 0 14px 28px rgba(111, 143, 131, 0.24) !important;
+}
+
+.btn:hover,
+.ghost-btn:hover {
+  transform: translateY(-1px);
+}
+
+.ghost-btn,
+.menu-btn,
+.tag {
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #14110d !important;
+  border-color: #cfc7b8 !important;
+}
+
+.pill,
+.access-status,
+.word-list span {
+  background: var(--jade-soft) !important;
+  color: var(--jade) !important;
+  border: 1px solid rgba(22, 127, 114, 0.16);
+}
+
+.hero-visual,
+.hero-card,
+.hero-panel,
+.platform-preview,
+.preview-main,
+.preview-side,
+.card,
+.panel,
+.metric,
+.stat,
+.course,
+.sample-cover,
+.sample-point,
+.cta,
+.subscribe-form,
+.callout,
+.media-frame,
+.side-card,
+.routine-card,
+.access-card,
+.download-head,
+.row-item,
+.chapter-card,
+.lesson-card,
+.module-card,
+.timeline-item,
+.compass-cell,
+.promise-card,
+.logic-row,
+.audio-card {
+  border-color: #e7ddcc !important;
+  background: rgba(255, 255, 255, 0.90) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.hero-visual,
+.hero-panel,
+.cta,
+.callout,
+.platform-preview {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 243, 235, 0.90)) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.system-band {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.80), rgba(244, 237, 222, 0.92)) !important;
+  border-color: #e7ddcc !important;
+}
+
+.preview-top,
+.footer,
+.brand {
+  border-color: #e7ddcc !important;
+}
+
+.preview-side {
+  background: #f7f0e3 !important;
+  border-color: #e7ddcc !important;
+}
+
+.side-item,
+.nav-icon {
+  background: #ffffff !important;
+  border-color: #e7ddcc !important;
+  color: #6f8f83 !important;
+}
+
+.side-item.active,
+.nav button.active .nav-icon,
+.nav button:hover .nav-icon,
+.nav button.active,
+.nav button:hover {
+  background: linear-gradient(90deg, #e8f3ef, rgba(255, 255, 255, 0.92)) !important;
+  color: var(--jade) !important;
+  border-color: rgba(22, 127, 114, 0.18) !important;
+}
+
+.step-num,
+.row-num,
+.lesson-num,
+.module-mark,
+.mini-num,
+.timeline-item::before {
+  background: linear-gradient(145deg, #167f72, #0e5f55) !important;
+  color: #fbf8f1 !important;
+}
+
+.bar,
+.audio-player {
+  background: #eadfcb !important;
+}
+
+.bar span,
+.audio-player span {
+  background: linear-gradient(90deg, #167f72, #7aa79e) !important;
+}
+
+input,
+select,
+textarea {
+  background: #fffdf8 !important;
+  color: #312a20 !important;
+  border-color: #cfc7b8 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #918676 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(22, 127, 114, 0.72) !important;
+  box-shadow: 0 0 0 3px rgba(22, 127, 114, 0.12) !important;
+}
+
+.hero-shot,
+.book-image,
+.hero-card img,
+.hero-panel img,
+.sample-cover img {
+  filter: saturate(0.98) contrast(1.02) drop-shadow(0 18px 24px rgba(48, 36, 18, 0.16));
+}
+
+.card:hover,
+.access-card:hover,
+.row-item:hover,
+.lesson-card:hover,
+.chapter-card:hover {
+  transform: translateY(-2px);
+  border-color: #cdb98f !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.drawer-backdrop {
+  background: rgba(20, 17, 13, 0.28) !important;
+}
+
+@media (max-width: 980px) {
+  .header.menu-open .nav-links {
+    background: rgba(251, 248, 241, 0.98) !important;
+    border-color: #cfc7b8 !important;
+  }
+
+  .header.menu-open .nav-links a {
+    background: rgba(255, 255, 255, 0.82) !important;
+  }
+}

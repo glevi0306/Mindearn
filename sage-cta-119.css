@@ -1,0 +1,55 @@
+:root {
+  --sage: #7f9a8e;
+  --sage-deep: #5f7f73;
+  --sage-dark: #10231f;
+  --sage-soft: #edf3ef;
+}
+
+.btn,
+a.btn,
+button.btn,
+.nav-actions .btn,
+.hero-actions .btn,
+.section-actions .btn,
+.top-actions .btn,
+.subscribe-form .btn,
+.cta .btn {
+  background: linear-gradient(180deg, #a9bdb1, #6f8f83) !important;
+  color: #fbf8f1 !important;
+  border-color: #6f8f83 !important;
+  box-shadow: 0 14px 28px rgba(111, 143, 131, 0.24) !important;
+}
+
+.btn:hover,
+a.btn:hover,
+button.btn:hover {
+  background: linear-gradient(180deg, #b7c8bf, #5f7f73) !important;
+  color: #fbf8f1 !important;
+}
+
+.kicker {
+  color: #6f8f83 !important;
+}
+
+.step-num,
+.row-num,
+.lesson-num,
+.module-mark,
+.mini-num,
+.timeline-item::before {
+  background: linear-gradient(145deg, #7f9a8e, #5f7f73) !important;
+  color: #ffffff !important;
+}
+
+.pill,
+.access-status,
+.word-list span {
+  background: var(--sage-soft) !important;
+  color: #47695e !important;
+  border-color: rgba(95, 127, 115, 0.22) !important;
+}
+
+.bar span,
+.audio-player span {
+  background: linear-gradient(90deg, #6f8f83, #9fb5a8) !important;
+}

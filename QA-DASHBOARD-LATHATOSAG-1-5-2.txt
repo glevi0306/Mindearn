@@ -1,0 +1,16 @@
+MindEarn dashboard láthatóság ellenőrzés - 1.5.2
+
+Megállapítás:
+- A dashboard.html nem veszett el.
+- A dashboard.html benne van a javított mappában.
+- A dashboard.html benne van a ZIP csomagban.
+- Az index.html továbbra is több ponton dashboard.html-re hivatkozik.
+
+Javítás:
+- Külön dashboard HTML előnézet készült: HTML-ELO_NEZET-DASHBOARD-1-5-2.html
+- A fő képi rendszer előnézet tetejére külön "Dashboard megnyitása" link került.
+
+Tartalmi oldalak:
+- index.html tartalmi szerkezete nem lett átírva.
+- dashboard.html tartalmi szerkezete nem lett átírva.
+- A hero, logo, piktogram és visszahelyezett képi rendszer blokk érintetlen maradt.

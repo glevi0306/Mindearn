@@ -1,0 +1,33 @@
+.brand .brand-logo {
+  width: 86px !important;
+  max-height: 68px;
+  height: auto;
+  object-fit: contain;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 8px 14px rgba(101, 72, 18, 0.16));
+}
+
+.header .brand {
+  min-width: 220px !important;
+}
+
+.sidebar .brand .brand-logo {
+  width: 94px !important;
+  max-height: 76px;
+}
+
+.mobile-bar .brand .brand-logo {
+  width: 74px !important;
+  max-height: 60px;
+}
+
+@media (max-width: 760px) {
+  .header .brand {
+    min-width: 0 !important;
+  }
+
+  .header .brand .brand-logo {
+    width: 70px !important;
+    max-height: 56px;
+  }
+}

@@ -1,0 +1,36 @@
+MindEarn piktogram beillesztes - 1.21 piktogram 1.5.1 hero javitassal
+
+Kiindulo alap:
+- mindearn_site_root_1_21_hero_kep_1_4_embedded
+
+Uj javitott verzio:
+- mindearn_site_root_1_21_piktogram_1_5_1_hero_fixed_embedded
+
+Mi tortent:
+- Az 1.5 piktogram modositas ujra lett epitve az utolso jo 1.4 hero-kepes alapbol.
+- A hero jobb oldali konyves kep aranyvedelme bekerult kozvetlenul az index.html fajlba is.
+- Cel: ha az index.html kulon nyilik meg, akkor se essen vissza a kep object-fit: cover viselkedesre.
+
+Piktogram valtoztatas:
+- Teremteni / Alkotni / Adni ikonok bekerultek.
+- A 01 / 02 / 03 sorszamok kikerultek.
+- A harom kartya kepi es szoveges tartalma kozepre zart.
+- A piktogram meret 62 px helyett 118 px.
+
+Beagyazas:
+- A harom piktogram data:image/png;base64 formatumban az index.html fajlba van agyazva.
+- A logo es a hero konyves kep korabbi beagyazasa megmaradt.
+
+HTML elonezet:
+- HTML-ELO_NEZET-PIKTOGRAM-1-5-1.html
+- Ez a tenyleges javitott index.html fajlt mutatja iframe-ben.
+
+Ellenorzes:
+- Data PNG kepek szama az index.html-ben: 6
+- Regi 01 / 02 / 03 sorszamok: nincsenek
+- Hianyzo hivatkozas ellenorzes: 0 hiba
+- JavaScript szintaxis ellenorzes: rendben
+
+Megjegyzes:
+- A dashboard.html ebben a javitasban sem valtozott.
+- A cel az volt, hogy a piktogram modositas ne valtoztassa meg a mar jo 1.4 hero konyves blokkot.
