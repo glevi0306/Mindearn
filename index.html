@@ -135,6 +135,7 @@
     }
 
     .menu-btn { display: none; background: var(--panel); border-color: var(--line-strong); }
+    [data-auth-visible] { display: none; }
 
     .hero {
       width: min(100%, var(--max));
@@ -785,8 +786,11 @@
       </div>
 
       <div class="nav-actions">
-        <a class="ghost-btn" href="dashboard.html">Belépés</a>
-        <a class="btn" href="#proba">Értesítő</a>
+        <a class="ghost-btn" href="login.html" data-auth-visible="logged-out">Bejelentkezés</a>
+        <a class="ghost-btn" href="register.html" data-auth-visible="logged-out">Regisztráció</a>
+        <a class="ghost-btn" href="dashboard.html" data-auth-visible="logged-in">Dashboard</a>
+        <button class="ghost-btn" type="button" data-auth-signout data-auth-visible="logged-in">Kijelentkezés</button>
+        <a class="btn" href="#proba" data-auth-visible="logged-in">Értesítő</a>
         <button class="menu-btn" type="button" aria-controls="navLinks" aria-expanded="false">Menü</button>
       </div>
     </nav>

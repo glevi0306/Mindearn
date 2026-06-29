@@ -9,6 +9,8 @@ export default defineConfig({
       input: {
         // Production pages only — preview/dev HTML files are excluded
         main:      'index.html',
+        login:     'login.html',
+        register:  'register.html',
         dashboard: 'dashboard.html',
         courses:   'courses.html',
         lesson:    'lesson.html',

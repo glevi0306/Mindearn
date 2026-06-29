@@ -120,6 +120,8 @@ a:focus-visible, button:focus-visible, textarea:focus-visible, input:focus-visib
   border-color: var(--line-strong);
 }
 
+[data-auth-visible] { display: none; }
+
 .page {
   width: min(100%, var(--max));
   margin: 0 auto;

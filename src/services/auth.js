@@ -1,13 +1,27 @@
 import { supabase } from '../lib/supabase.js';
 
-// TODO Phase 4: Send magic-link sign-in email
-export async function signInWithMagicLink(email) {}
+export async function signInWithPassword(email, password) {
+  return supabase.auth.signInWithPassword({ email, password });
+}
 
-// TODO Phase 4: Sign out the current user
-export async function signOut() {}
+export async function signUp(email, password, name) {
+  return supabase.auth.signUp({
+    email,
+    password,
+    options: { data: { name: name || undefined } },
+  });
+}
 
-// TODO Phase 4: Return the current session or null
-export async function getSession() {}
+export async function signOut() {
+  return supabase.auth.signOut();
+}
 
-// TODO Phase 4: Return the current user object or null
-export async function getCurrentUser() {}
+export async function getSession() {
+  const { data: { session } } = await supabase.auth.getSession();
+  return session;
+}
+
+export async function getCurrentUser() {
+  const { data: { user } } = await supabase.auth.getUser();
+  return user;
+}

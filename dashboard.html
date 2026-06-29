@@ -494,6 +494,7 @@
       <div class="nav-label">Fiók</div>
       <nav class="nav">
         <button type="button" data-view="profile"><span class="nav-icon">JS</span>Profil és hozzáférések</button>
+        <button type="button" data-auth-signout><span class="nav-icon">↩</span>Kijelentkezés</button>
       </nav>
 
       <div class="side-card">
@@ -689,6 +690,10 @@
     document.getElementById("savePractice").addEventListener("click", () => {
       document.getElementById("practiceStatus").textContent = "Mai gyakorlás rögzítve erre a munkamenetre.";
     });
+  </script>
+  <script type="module">
+    import { requireAuth } from './src/lib/dashboardGuard.js';
+    requireAuth();
   </script>
   <script type="module" src="mindearn-app.js"></script>
 </body>

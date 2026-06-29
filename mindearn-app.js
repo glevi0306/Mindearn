@@ -1,4 +1,5 @@
 import MindEarnSettings from './mindearn-config.js';
+import { initAuthNav } from './src/lib/authNav.js';
 
 const labels = {
   active: "Aktív",
@@ -141,6 +142,7 @@ wireSubscriptionForms();
 wireLeadPopup();
 applyAccessState();
 track("page_view");
+initAuthNav();
 
 if (import.meta.env.DEV) {
   import('./src/utils/healthCheck.js').then(({ checkSupabaseConnection }) => {

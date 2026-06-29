@@ -27,7 +27,10 @@
         <a href="profile.html">Profil</a>
       </div>
       <div class="nav-actions">
-        <a class="ghost-btn" href="dashboard.html">Dashboard</a>
+        <a class="ghost-btn" href="login.html" data-auth-visible="logged-out">Bejelentkezés</a>
+        <a class="ghost-btn" href="register.html" data-auth-visible="logged-out">Regisztráció</a>
+        <a class="ghost-btn" href="dashboard.html" data-auth-visible="logged-in">Dashboard</a>
+        <button class="ghost-btn" type="button" data-auth-signout data-auth-visible="logged-in">Kijelentkezés</button>
         <button class="menu-btn" type="button" aria-label="Menü">Menü</button>
       </div>
     </nav>
