@@ -1,4 +1,4 @@
-window.MindEarnSettings = {
+const MindEarnSettings = {
   subscribeProvider: "brevo",
   analyticsEndpoint: "",
   subscribeEndpoint: "/api/subscribe",
@@ -13,3 +13,5 @@ window.MindEarnSettings = {
     profile: "active"
   }
 };
+
+export default MindEarnSettings;
