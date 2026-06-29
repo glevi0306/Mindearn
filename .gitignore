@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Root-level QA screenshots and preview artifacts (not production content)
+mindearn_container_1_3_preview.png
+mindearn_hero_kep_1_4_preview.png
+mindearn_logo_1_1_valtoztatas_preview.png
+mindearn_logo_1_2_embedded_valtoztatas_preview.png
+mindearn_piktogram_1_5_1_kontroll_preview.png

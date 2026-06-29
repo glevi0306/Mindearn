@@ -1,0 +1,14 @@
+{
+  "name": "mindearn",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp mindearn-config.js mindearn-app.js dist/ && mkdir -p dist/assets/downloads && cp assets/downloads/* dist/assets/downloads/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
