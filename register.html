@@ -189,8 +189,12 @@
 
       <form id="registerForm" novalidate>
         <div class="field">
-          <label for="name">Neved</label>
-          <input type="text" id="name" name="name" autocomplete="name" placeholder="Teljes neved">
+          <label for="lastName">Vezetéknév</label>
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" required placeholder="Pl. Jámbor">
+        </div>
+        <div class="field">
+          <label for="firstName">Keresztnév</label>
+          <input type="text" id="firstName" name="firstName" autocomplete="given-name" required placeholder="Pl. Sándor">
         </div>
         <div class="field">
           <label for="email">Email-cím</label>
@@ -243,9 +247,10 @@
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const password = form.password.value;
+      const firstName = form.firstName.value.trim();
+      const lastName  = form.lastName.value.trim();
+      const email     = form.email.value.trim();
+      const password  = form.password.value;
 
       btn.disabled = true;
       statusEl.textContent = '';
@@ -254,7 +259,13 @@
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
-        options: { data: { name: name || undefined } },
+        options: {
+          data: {
+            first_name: firstName || undefined,
+            last_name:  lastName  || undefined,
+            name: (firstName && lastName) ? `${lastName} ${firstName}` : (lastName || firstName || undefined),
+          },
+        },
       });
 
       if (error) {

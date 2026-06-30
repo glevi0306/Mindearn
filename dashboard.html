@@ -493,7 +493,7 @@
 
       <div class="nav-label">Fiók</div>
       <nav class="nav">
-        <button type="button" data-view="profile"><span class="nav-icon">JS</span>Profil és hozzáférések</button>
+        <button type="button" data-view="profile"><span class="nav-icon" id="profileInitials">…</span>Profil és hozzáférések</button>
         <button type="button" data-auth-signout><span class="nav-icon">↩</span>Kijelentkezés</button>
       </nav>
 
@@ -537,10 +537,10 @@
         </article>
 
         <div class="metrics">
-          <div class="metric"><small>Beépítési út</small><b>3 / 9 hét</b></div>
+          <div class="metric"><small>Beépítési út</small><b>3 / 6 / 9</b></div>
           <div class="metric"><small>Könyvmodul</small><b>12</b></div>
           <div class="metric"><small>Napi iránytű</small><b>3x3</b></div>
-          <div class="metric"><small>Következő élő</small><b>Júl. 08.</b></div>
+          <div class="metric"><small>Következő élő</small><b>-</b></div>
         </div>
 
         <div class="section-title">
@@ -692,7 +692,25 @@
   </script>
   <script type="module">
     import { requireAuth } from './src/lib/dashboardGuard.js';
+    import { supabase } from './src/lib/supabase.js';
+    import { getProfile, getDisplayFirstName } from './src/services/profile.js';
+
     requireAuth();
+
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
+      if (!session) return;
+      const initialsEl = document.getElementById('profileInitials');
+      try {
+        const profile = await getProfile();
+        const first = getDisplayFirstName(profile, session.user);
+        const last = profile?.last_name || '';
+        initialsEl.textContent = last
+          ? (last[0] + first[0]).toUpperCase()
+          : first.slice(0, 2).toUpperCase() || '?';
+      } catch {
+        initialsEl.textContent = session.user.email[0].toUpperCase();
+      }
+    });
   </script>
   <script type="module" src="mindearn-app.js"></script>
 </body>

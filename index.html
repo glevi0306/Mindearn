@@ -296,6 +296,8 @@
       box-shadow: var(--shadow-soft);
       transition: transform 0.18s ease, box-shadow 0.18s ease;
       text-align: center;
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
@@ -303,12 +305,24 @@
       box-shadow: var(--shadow);
     }
 
-    .card img {
-      width: 118px;
-      height: 118px;
+    .image-zone {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-zone .product {
+      max-width: 250px;
+      max-height: 250px;
+      width: auto;
+      height: auto;
       object-fit: contain;
-      display: block;
-      margin: 0 auto 20px;
+    }
+
+    .product-bookpair-composite {
+      max-width: 270px;
+      transform: translateY(28px);
     }
 
     .card small {
@@ -322,8 +336,13 @@
 
     .card p {
       color: var(--muted);
-      margin: 0 auto;
+      margin: 0 auto 24px;
       max-width: 27ch;
+    }
+
+    .card .btn {
+      margin-top: auto;
+      align-self: center;
     }
 
     .hero-book-visual {
@@ -410,9 +429,11 @@
     }
 
     .book-image {
-      width: min(100%, 620px);
+      width: min(100%, 675px);
+      height: auto;
+      object-fit: contain;
       margin-inline: auto;
-      filter: drop-shadow(0 24px 30px rgba(65, 48, 25, 0.18));
+      display: block;
     }
 
     .steps {
@@ -538,16 +559,15 @@
 
     .sample-layout {
       display: grid;
-      grid-template-columns: minmax(0, 0.78fr) minmax(360px, 0.92fr);
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.85fr);
       gap: clamp(26px, 5vw, 70px);
       align-items: center;
     }
 
     .sample-covers {
-      display: grid;
-      grid-template-columns: 1fr 0.72fr;
+      display: flex;
       gap: 14px;
-      align-items: end;
+      align-items: flex-end;
     }
 
     .sample-cover {
@@ -556,30 +576,72 @@
       background: rgba(255, 255, 255, 0.82);
       padding: 12px;
       box-shadow: var(--shadow);
+      flex: 1;
+      min-width: 0;
+      transition: transform 0.38s cubic-bezier(0.34, 1.08, 0.64, 1), opacity 0.38s ease, box-shadow 0.38s ease;
     }
 
-    .sample-cover.secondary {
-      transform: translateY(26px);
-      opacity: 0.88;
+    .sample-cover.is-active {
+      transform: scale(1.04) translateY(-4px);
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .sample-cover:not(.is-active) {
+      transform: scale(0.82) translateY(22px);
+      opacity: 0.5;
+      box-shadow: none;
+    }
+
+    .cover-switcher {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cover-arrow {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--ink);
+      font-size: 1.35rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .cover-arrow:hover {
+      background: var(--panel, #fff);
+      box-shadow: var(--shadow-soft);
+      border-color: var(--jade);
+    }
+
+    #olvassbele .section-actions {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+
+    #olvassbele .section-actions .btn {
+      width: 100%;
+      justify-content: center;
     }
 
     .sample-cover img {
       width: 100%;
+      height: 400px;
       border-radius: 10px;
-      aspect-ratio: 1 / 1.35;
-      object-fit: cover;
-      object-position: top center;
+      object-fit: contain;
     }
 
     .sample-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-weight: 740;
+      display: none;
     }
 
     .sample-points {
@@ -748,8 +810,8 @@
       }
       .btn, .ghost-btn { width: 100%; }
       .stat-row, .preview-side { grid-template-columns: 1fr; }
-      .sample-covers { grid-template-columns: 1fr; }
-      .sample-cover.secondary { transform: none; }
+      .sample-covers { flex-direction: column; }
+      .sample-cover:not(.is-active) { transform: scale(0.93) translateY(0); }
       .hero-shot { aspect-ratio: 4 / 3; object-position: 40% center; }
       .visual-card { padding: 14px; }
     }
@@ -781,7 +843,7 @@
         <a href="audio.html">Hanganyagok</a>
         <a href="#ut">3-6-9</a>
         <a href="workbook.html">Munkafüzet</a>
-        <a href="#kepek">Képek</a>
+
       </div>
 
       <div class="nav-actions">
@@ -809,7 +871,7 @@
       </div>
 
       <aside class="hero-visual">
-        <img class="hero-shot hero-book-visual" src="assets/keptar/mindearn-konyvek-alpha.png" alt="MindEarn Bőség kézikönyv világos és sötét könyv">
+        <img class="hero-shot hero-book-visual" src="assets/visuals/mindearn-konyvek-alpha_new.png" alt="MindEarn Bőség kézikönyv világos és sötét könyv">
         <div class="access-preview">
           <div>
             <b>Saját MindEarn utam</b>
@@ -819,43 +881,58 @@
       </aside>
     </section>
 
-    <section class="section" id="konyv">
-      <div class="section-title center">
-        <p class="kicker">A könyv mint belépő</p>
-        <h2>Először felismerés. Utána útvonal.</h2>
-        <p>A Bőség kézikönyv az első kapcsolat. A platform pedig segít abban, hogy az olvasásból gyakorlás, a gyakorlásból saját ritmus, a ritmusból eredmény szülessen.</p>
-      </div>
+      <section class="cards">
+          <article class="card">
+              <div class="card-top"><div class="num">1</div><div></div></div>
+              <div class="image-zone">
+                <img class="product product-bookpair-composite" src="assets/visuals/platform-book.png" alt="MindEarn könyv">
+              </div>
+              <div class="icon-wrap"><div class="icon-circle">📖</div></div>
+              <h3 class="title">Könyv</h3>
+              <p class="desc">Önálló olvasási és gyakorlati út. Neked való, ha saját tempóban szeretnél haladni, és elsőként a felismeréseket szeretnéd megalapozni.</p>
+              <a class="btn" href="#"><span>Megnézem a könyvet</span><span class="arrow">›</span></a>
+          </article>
 
-      <div class="cards">
-        <article class="card">
-          <img src="assets/keptar/icon-teremteni.png" alt="Teremteni piktogram">
-          <h3>Teremteni</h3>
-          <p>Belső állapot, figyelem, önazonosság. A napi út kezdőpontja.</p>
-        </article>
-        <article class="card">
-          <img src="assets/keptar/icon-alkotni-gold.png" alt="Alkotni piktogram">
-          <h3>Alkotni</h3>
-          <p>Modulok, munkalapok, videós leckék és konkrét döntések.</p>
-        </article>
-        <article class="card">
-          <img src="assets/keptar/icon-adni.png" alt="Adni piktogram">
-          <h3>Adni</h3>
-          <p>Értékadás, lezárás, közösségi alkalmak és továbbvitt tapasztalat.</p>
-        </article>
-      </div>
-    </section>
+          <article class="card">
+              <div class="card-top"><div class="num">2</div><div></div></div>
+              <div class="image-zone">
+                <img class="product" src="assets/visuals/platform-laptop.png" alt="Online képzés laptopon">
+              </div>
+              <div class="icon-wrap"><div class="icon-circle">▣</div></div>
+              <h3 class="title">Online képzés</h3>
+              <p class="desc">Internetes, vezetett tanulási út videókkal, gyakorlatokkal, letölthető anyagokkal. Neked való, ha rendszerezett, lépésről lépésre vezetett folyamatot szeretnél.</p>
+              <a class="btn" href="#"><span>Megnézem az online képzést</span><span class="arrow">›</span></a>
+          </article>
+
+          <article class="card">
+              <div class="card-top"><div class="num">3</div><div></div></div>
+              <div class="image-zone">
+                <img class="product" src="assets/visuals/live-circle.png" alt="Élő workshop közösségi kör">
+              </div>
+              <div class="icon-wrap"><div class="icon-circle">👥</div></div>
+              <h3 class="title">Élő workshop</h3>
+              <p class="desc">Gyakorlati műhely személyes jelenléttel, közös gyakorlással, mélyebb feldolgozással. Neked való, ha közösségben, vezetett térben szeretnéd megélni a MindEarn-rendszert.</p>
+              <a class="btn" href="#"><span>Érdekel az élő workshop</span><span class="arrow">›</span></a>
+          </article>
+      </section>
 
     <section class="section" id="olvassbele">
       <div class="sample-layout">
-        <div class="sample-covers">
-          <article class="sample-cover">
-            <img src="assets/previews/borito-vilagos-preview.png" alt="MindEarn Bőség kézikönyv világos borító előnézet">
-            <div class="sample-meta"><span>Világos borító</span><span>PDF részlet</span></div>
-          </article>
-          <article class="sample-cover secondary">
-            <img src="assets/previews/borito-sotet-preview.png" alt="MindEarn Bőség kézikönyv kontrasztos borító előnézet">
-            <div class="sample-meta"><span>Kontrasztos borító</span><span>PDF részlet</span></div>
-          </article>
+        <div>
+          <div class="sample-covers">
+            <article class="sample-cover is-active">
+              <img src="assets/previews/borito-vilagos-preview.png" alt="MindEarn Bőség kézikönyv világos borító előnézet">
+              <div class="sample-meta"><span>Világos borító</span><span>PDF részlet</span></div>
+            </article>
+            <article class="sample-cover">
+              <img src="assets/previews/borito-sotet-preview.png" alt="MindEarn Bőség kézikönyv kontrasztos borító előnézet">
+              <div class="sample-meta"><span>Kontrasztos borító</span><span>PDF részlet</span></div>
+            </article>
+          </div>
+          <div class="cover-switcher">
+            <button class="cover-arrow" data-sample-cover-target="0" aria-label="Világos borító">‹</button>
+            <button class="cover-arrow" data-sample-cover-target="1" aria-label="Kontrasztos borító">›</button>
+          </div>
         </div>
         <div>
           <p class="kicker">Olvass bele / Próbaanyag</p>
@@ -868,8 +945,8 @@
           </div>
           <div class="section-actions">
             <a class="btn" href="assets/downloads/mindearn-boseg-kezikonyv-reszlet-vilagos.pdf">Világos PDF megnyitása</a>
-            <a class="ghost-btn" href="assets/downloads/mindearn-boseg-kezikonyv-reszlet-sotet.pdf">Kontrasztos PDF</a>
-            <a class="ghost-btn" href="profile.html#letoltesek">Letöltési központ</a>
+            <a class="btn" href="assets/downloads/mindearn-boseg-kezikonyv-reszlet-sotet.pdf">Sötét PDF megnyitása</a>
+            <a class="btn" href="profile.html#letoltesek">Letöltési központ</a>
           </div>
         </div>
       </div>
@@ -878,7 +955,7 @@
     <section class="system-band" id="platform">
       <div class="section system-layout">
         <div>
-          <img class="book-image" src="assets/book-3d-light.png" alt="MindEarn Bőség kézikönyv 3D könyv">
+          <img class="book-image" src="assets/visuals/icon-alkotni-gold.png" alt="MindEarn Alkotni ikon">
         </div>
         <div>
           <p class="kicker">Platformlogika</p>
@@ -893,45 +970,10 @@
 
           <div class="section-actions">
             <a class="btn" href="dashboard.html">Dashboard előnézet</a>
-            <a class="ghost-btn" href="practice.html">3-6-9 hetes út</a>
-            <a class="ghost-btn" href="workbook.html">Munkafüzet</a>
+            <a class="btn" href="practice.html">3-6-9 hetes út</a>
+            <a class="btn" href="workbook.html">Munkafüzet</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section visual-showcase" id="kepek" aria-labelledby="visualShowcaseTitle">
-      <div class="section-title center">
-        <p class="kicker">MindEarn képi rendszer</p>
-        <h2 id="visualShowcaseTitle">A könyv, a platform és az élő tér egy vizuális útra kerül.</h2>
-        <p>A képek saját MindEarn anyagokból épülnek, világos háttéren, visszafogott árnyékkal és zsálya hangsúllyal.</p>
-      </div>
-
-      <div class="visual-grid">
-        <article class="visual-card">
-          <img data-image-slot="visualBook" src="assets/visuals/book-wide-subtitle.png" alt="MindEarn Bőség kézikönyv világos könyvvizual">
-          <div class="visual-card-body">
-            <p class="kicker">Könyv</p>
-            <h3>Belépőanyag és első kapcsolat</h3>
-            <p>A borító és a könyvrészlet egyértelműen a rendszer kezdőpontjaként jelenik meg.</p>
-          </div>
-        </article>
-        <article class="visual-card">
-          <img data-image-slot="visualPlatform" src="assets/visuals/platform-laptop.png" alt="MindEarn képzési előzetes laptopon">
-          <div class="visual-card-body">
-            <p class="kicker">Platform</p>
-            <h3>Tanulási tér</h3>
-            <p>Kurzus, hanganyag és gyakorlási út egy tiszta felületen kapcsolódik össze.</p>
-          </div>
-        </article>
-        <article class="visual-card">
-          <img data-image-slot="visualLive" src="assets/visuals/live-circle.png" alt="MindEarn élő tanulási kör">
-          <div class="visual-card-body">
-            <p class="kicker">Élő tér</p>
-            <h3>Közösségi ritmus</h3>
-            <p>Az online tanulás mellé élő alkalom és közös fókusz társul.</p>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -959,7 +1001,7 @@
             <h3>Mai MindEarn ritmus</h3>
             <p class="lead" style="font-size:1rem">Három felismerés, hat perc fókusz, kilenc perc lezárás.</p>
             <div class="stat-row">
-              <div class="stat"><small>Út</small><b>3/9 hét</b></div>
+              <div class="stat"><small>Út</small><b>3/ 6 / 9 hét</b></div>
               <div class="stat"><small>Kurzus</small><b>64%</b></div>
               <div class="stat"><small>Hanganyag</small><b>6</b></div>
             </div>
@@ -1061,6 +1103,17 @@
         menuButton.setAttribute("aria-expanded", "false");
       });
     });
+  </script>
+  <script>
+    (function () {
+      var covers = document.querySelectorAll('.sample-cover');
+      document.querySelectorAll('[data-sample-cover-target]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var idx = +btn.dataset.sampleCoverTarget;
+          covers.forEach(function (c, i) { c.classList.toggle('is-active', i === idx); });
+        });
+      });
+    })();
   </script>
   <script type="module" src="mindearn-app.js"></script>
 </body>

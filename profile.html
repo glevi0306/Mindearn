@@ -50,7 +50,7 @@
       </div>
       <aside class="callout">
         <span class="pill">Felhasználó</span>
-        <h2>Jámbor Sándor</h2>
+        <h2 id="profileDisplayName"></h2>
         <p>MindEarn alap hozzáférés, könyvanyag, munkafüzet és platform előnézet.</p>
         <div class="bar"><span style="width:64%"></span></div>
       </aside>
@@ -213,6 +213,21 @@
   <script>
     document.querySelector(".menu-btn").addEventListener("click", () => {
       document.querySelector(".header").classList.toggle("menu-open");
+    });
+  </script>
+  <script type="module">
+    import { supabase } from './src/lib/supabase.js';
+    import { getProfile, getDisplayFirstName } from './src/services/profile.js';
+
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
+      if (!session) return;
+      const nameEl = document.getElementById('profileDisplayName');
+      try {
+        const profile = await getProfile();
+        nameEl.textContent = getDisplayFirstName(profile, session.user);
+      } catch {
+        nameEl.textContent = session.user.email.split('@')[0];
+      }
     });
   </script>
   <script type="module" src="mindearn-app.js"></script>
